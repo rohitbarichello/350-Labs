@@ -1,8 +1,8 @@
-				; ARMv8 Assembly file containing
-	 			; "test" function	 
-				; note: comments come after the ";"
+// ARMv8 Assembly file containing
+// "test" function	 
 
-	.globl test          	; Defining the test symbol for the linker
+
+	.globl test          	// Defining the test symbol for the linker
 test:
 	add	X0, X0, X1
 	br	X30
