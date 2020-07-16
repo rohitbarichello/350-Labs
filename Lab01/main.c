@@ -1,4 +1,4 @@
-/* main.c simple program to test assembler program */
+/* main.c simple program to test compilation and assembly */
 
 #include <stdio.h>
 
