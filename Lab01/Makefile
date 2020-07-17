@@ -4,14 +4,12 @@
 # This example is intended to be built with Linaro bare-metal GCC
 
 TARGET=Lab01
-
 CC=gcc
 LD=gcc
 
+FLAGS=-g -O0
 
 all: $(TARGET)
-
-rebuild: clean all
 
 clean:
 	rm *.o
@@ -19,12 +17,11 @@ clean:
 
 main.o: main.c
 # Compile for best debug view (lowest optimization)
-	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
+	$(CC) $(FLAGS) -c $^  -o $@
 
 test.o: test.S
 # Compile for best debug view (lowest optimization)
-	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
+	$(CC) $(FLAGS) -c $^ -o $@
 
 $(TARGET): main.o test.o
-# Link with specific base address to suit VE model memory layout
-	$(LD) -W main.o test.o -o $@
+	$(LD) main.o test.o -o $@
