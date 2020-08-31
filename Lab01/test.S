@@ -6,9 +6,9 @@ test :
 
 // make sure you replace Z with the first digit of your UIN
 
-LSR X1, X0 , #Z  //computation 1, result is in $X1
+LSR X1, X0 , #6  //computation 1, result is in $X1
 
-LSL X2 , X0 , #Z //computation 2, result is in $X2
+LSL X2 , X0 , #6 //computation 2, result is in $X2
 
 // check the content of $X1 and $X2
 
