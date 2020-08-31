@@ -7,5 +7,6 @@
 	.globl test          	// Defining the symbol "test" for the
 				// linker
 test:
-	add	X0, X0, X1      // Perform the actual addition
+	ORR	X0, XZR, #3     // Perform the actual addition
+	ORR X0, X0, #7
 	br	X30
