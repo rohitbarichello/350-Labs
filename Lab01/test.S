@@ -1,17 +1,14 @@
-// Test.S assembly test file, determine what this function is...
+// ARMv8 Assembly file containing "test" function.
 
-.globl test
+//Note that by default C passes the first two arguments to a function
+//call in registers X0 and X1 respectively.
+	
 
-test :
+	.globl test          	// Defining the symbol "test" for the
+				// linker
+test:
+	ORR	X0, XZR, #3     // Perform the actual addition
+	ADD X0, X0, #7
+	br	X30
 
-// make sure you replace Z with the first digit of your UIN
 
-LSR X1, X0 , #6  //computation 1, result is in $X1
-
-LSL X2 , X0 , #6 //computation 2, result is in $X2
-
-// check the content of $X1 and $X2
-
-ADD X0 , X1 , X2
-
-BR X30 // return from main ; return address stored in X30
