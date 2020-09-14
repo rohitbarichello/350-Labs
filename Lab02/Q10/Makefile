@@ -18,10 +18,10 @@ clean:
 main.o: main.c
 # Compile for best debug view (lowest optimization)
 	$(CC) $(FLAGS) -c $^  -o $@
-
-test.o: test.S
+	
+lab02c.o: lab02c.S
 # Compile for best debug view (lowest optimization)
 	$(CC) $(FLAGS) -c $^ -o $@
 
-$(TARGET): main.o test.o
-	$(LD) main.o test.o -o $@
+$(TARGET): main.o lab02c.o
+	$(LD) main.o lab02c.o -o $@
