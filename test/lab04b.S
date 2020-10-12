@@ -17,39 +17,23 @@ lab04b:
 	
 else:
 	SUB X0, X0, 1		//n - 1
-	BL lab04b			//call fact(n-1) we'll return
+	BL lab04b				//call fact(n-1) we'll return
 						//back here after function call
 	
 	LDUR X0, [SP, #0]	//restore n from caller
 	LDUR LR, [SP, #8]	//restore LR from caller
-	ADD SP, SP, #16 	//pop stack
+	ADD SP, SP, #16 		//pop stack
 	
-	SUB SP, SP, #16		//store return address on stack
+	SUB SP, SP, #16		//store n and return address on stack
 	STUR LR, [SP, #8]
 	
 	BL my_mul			//multiply n and the previous function call
-	ADD X1, X0, XZR 	//store result of my_mul in X1
+	ADD X1, X0, XZR 	//store result of my_mul in X0
 	
 	LDUR LR, [SP, #8]	//restore LR from caller
 	ADD SP, SP, #16
 	
 	BR LR
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 my_mul:
 	SUB SP, SP, 16

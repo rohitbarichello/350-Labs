@@ -14,7 +14,7 @@ loop:
 	SUB X1, X3, #10 //subtract 10 from i and store the difference in X1
 	CBZ X1, quit //if the difference is 0, we know the loop is over
 	
-	STUR X0, [X7, #0] //store j, which is in X0 into X5 at its current address
+	STUR X0, [X7, #0] //store j, which is in X0 into X7 at its current address
 	
 	ADD X7, X7, #4 //increment X5 by 4 bytes so that in the next iteration,
 				   //line 17 will store j in the next word, i.e. the next
@@ -36,4 +36,4 @@ UIN:
 .word 36
 
 my_array:
-.space 10
+.space 40 //because there are 10 array spaces and 
