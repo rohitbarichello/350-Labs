@@ -4,18 +4,12 @@
 module SignExtenderTest;
 
 	task passTest;
-		input [64:0] actualOut, expectedOut;
+		input [63:0] actualOut, expectedOut;
 		input [`STRLEN*8:0] testType;
-		input [7:0] passed;
+		inout [7:0] passed;
 	
 		if(actualOut == expectedOut) begin $display ("%s passed", testType); passed = passed + 1; end
 		else $display ("%s failed: %x should be %x", testType, actualOut, expectedOut);
-	endtask
-	
-	task howManyPassed;
-		input [7:0] passed;
-		
-		$display (passed);
 	endtask
 	
 	task allPassed;
@@ -70,8 +64,7 @@ module SignExtenderTest;
 			passTest(BusImm, 64'b1111111111111111111111111111111111111111111111111111111111111110, "CBZ Test 2", passed);
 			
 		#10;
-		
-		howManyPassed(passed);
+
 		allPassed(passed, 8);
 
 	end
