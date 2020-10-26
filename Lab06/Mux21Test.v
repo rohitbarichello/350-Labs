@@ -1,27 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   13:59:40 03/02/2009
-// Design Name:   Mux21
-// Module Name:   E:/350/Lab6/Mux21/Mux21Test.v
-// Project Name:  Mux21
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: Mux21
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 `define STRLEN 15
 module Mux21Test_v;
 

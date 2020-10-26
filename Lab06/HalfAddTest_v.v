@@ -1,27 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   15:12:10 03/02/2009
-// Design Name:   HalfAdd
-// Module Name:   E:/350/Lab6/HalfAdd/HalfAddTest.v
-// Project Name:  HalfAdd
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: HalfAdd
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 `define STRLEN 15
 module HalfAddTest_v;
 
