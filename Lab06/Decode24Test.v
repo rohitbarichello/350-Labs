@@ -1,27 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   15:06:33 03/02/2009
-// Design Name:   Decode24
-// Module Name:   E:/350/Lab6/Decode24/Decode24Test.v
-// Project Name:  Decode24
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: Decode24
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 `define STRLEN 15
 module Decode24Test_v;
 
