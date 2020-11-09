@@ -1,30 +1,13 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   10:13:28 03/03/2009
-// Design Name:   RegisterFile
-// Module Name:   E:/350/Lab7/RegisterFile/RegisterFileTest.v
-// Project Name:  RegisterFile
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: RegisterFile
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 `define STRLEN 32
 module RegisterFileTest_v;
 
+		initial //This initial block used to dump all wire/reg values to dump file
+     begin
+       $dumpfile("RegisterFileTest_v.vcd");
+       $dumpvars(0,RegisterFileTest_v);
+     end
 
 	task passTest;
 		input [63:0] actualOut, expectedOut;
@@ -57,7 +40,7 @@ module RegisterFileTest_v;
 	wire [63:0] BusB;
 
 	// Instantiate the Unit Under Test (UUT)
-	RegisterFile uut (
+	RegisterFile dut (
 		.BusA(BusA), 
 		.BusB(BusB), 
 		.BusW(BusW), 
