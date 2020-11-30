@@ -1,4 +1,4 @@
-#! /usr/bin/vvp
+#! \iverilog
 :ivl_version "10.2 (stable)";
 :ivl_delay_selection "TYPICAL";
 :vpi_time_precision - 12;

@@ -1,0 +1,389 @@
+$date
+	Mon Nov 30 02:19:48 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module SingleCycleProcTest_v $end
+$var wire 64 ! dMemOut [63:0] $end
+$var wire 64 " currentPC [63:0] $end
+$var reg 1 # CLK $end
+$var reg 1 $ Reset_L $end
+$var reg 8 % passed [7:0] $end
+$var reg 64 & startPC [63:0] $end
+$var reg 16 ' watchdog [15:0] $end
+$scope module uut $end
+$var wire 1 # CLK $end
+$var wire 1 $ resetl $end
+$var wire 64 ( startpc [63:0] $end
+$var wire 1 ) zero $end
+$var wire 1 * uncond_branch $end
+$var wire 2 + signop [1:0] $end
+$var wire 64 , signExtImm64 [63:0] $end
+$var wire 5 - rn [4:0] $end
+$var wire 5 . rm [4:0] $end
+$var wire 1 / regwrite $end
+$var wire 64 0 regoutB [63:0] $end
+$var wire 64 1 regoutA [63:0] $end
+$var wire 1 2 reg2loc $end
+$var wire 5 3 rd [4:0] $end
+$var wire 11 4 opcode [10:0] $end
+$var wire 64 5 nextpc [63:0] $end
+$var wire 1 6 memwrite $end
+$var wire 1 7 memread $end
+$var wire 1 8 mem2reg $end
+$var wire 32 9 instruction [31:0] $end
+$var wire 64 : dmemout [63:0] $end
+$var wire 64 ; busw [63:0] $end
+$var wire 1 < branch $end
+$var wire 1 = alusrc $end
+$var wire 64 > aluout [63:0] $end
+$var wire 4 ? aluctrl [3:0] $end
+$var wire 64 @ aluBusB [63:0] $end
+$var reg 64 A currentpc [63:0] $end
+$scope module ALU $end
+$var wire 64 B BusB [63:0] $end
+$var wire 1 ) Zero $end
+$var wire 64 C BusA [63:0] $end
+$var wire 4 D ALUCtrl [3:0] $end
+$var reg 64 E BusW [63:0] $end
+$upscope $end
+$scope module control $end
+$var wire 11 F opcode [10:0] $end
+$var reg 4 G aluop [3:0] $end
+$var reg 1 = alusrc $end
+$var reg 1 < branch $end
+$var reg 1 8 mem2reg $end
+$var reg 1 7 memread $end
+$var reg 1 6 memwrite $end
+$var reg 1 2 reg2loc $end
+$var reg 1 / regwrite $end
+$var reg 2 H signop [1:0] $end
+$var reg 1 * uncond_branch $end
+$upscope $end
+$scope module dataMem $end
+$var wire 64 I Address [63:0] $end
+$var wire 1 # Clock $end
+$var wire 1 7 MemoryRead $end
+$var wire 1 6 MemoryWrite $end
+$var wire 64 J WriteData [63:0] $end
+$var reg 64 K ReadData [63:0] $end
+$scope task initset $end
+$var reg 64 L addr [63:0] $end
+$var reg 64 M data [63:0] $end
+$upscope $end
+$upscope $end
+$scope module imem $end
+$var wire 64 N Address [63:0] $end
+$var reg 32 O Data [31:0] $end
+$upscope $end
+$scope module nextPCLogic $end
+$var wire 1 ) ALUZero $end
+$var wire 1 < Branch $end
+$var wire 64 P CurrentPC [63:0] $end
+$var wire 1 * Uncondbranch $end
+$var wire 64 Q SignExtImm64 [63:0] $end
+$var reg 64 R NextPC [63:0] $end
+$var reg 64 S realImm64 [63:0] $end
+$upscope $end
+$scope module regfile $end
+$var wire 64 T BusA [63:0] $end
+$var wire 64 U BusB [63:0] $end
+$var wire 64 V BusW [63:0] $end
+$var wire 1 # Clk $end
+$var wire 5 W RA [4:0] $end
+$var wire 5 X RB [4:0] $end
+$var wire 5 Y RW [4:0] $end
+$var wire 1 / RegWr $end
+$upscope $end
+$scope module signextender $end
+$var wire 2 Z Ctrl [1:0] $end
+$var wire 26 [ Imm26 [25:0] $end
+$var wire 1 \ extBit $end
+$var reg 64 ] BusImm [63:0] $end
+$upscope $end
+$upscope $end
+$scope task allPassed $end
+$var reg 8 ^ numTests [7:0] $end
+$var reg 8 _ passed [7:0] $end
+$upscope $end
+$scope task passTest $end
+$var reg 64 ` actualOut [63:0] $end
+$var reg 64 a expectedOut [63:0] $end
+$var reg 8 b passed [7:0] $end
+$var reg 257 c testType [256:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+bx ]
+x\
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+bx Q
+bx P
+bx O
+bx N
+b0 M
+b100000 L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+x=
+x<
+bx ;
+bx :
+bx 9
+x8
+x7
+x6
+bx 5
+bx 4
+bx 3
+x2
+bx 1
+bx 0
+x/
+bx .
+bx -
+bx ,
+bx +
+x*
+x)
+b0 (
+b0 '
+b0 &
+b0 %
+1$
+0#
+bx "
+bx !
+$end
+#60000
+1#
+#120000
+b1 '
+0#
+#121000
+0$
+#180000
+1#
+#240000
+bx00 S
+b0 "
+b0 A
+b0 N
+b0 P
+b10 '
+0#
+#241000
+1$
+#242000
+b100 5
+b100 R
+#244000
+b10000 @
+b10000 B
+b1 +
+b1 H
+b1 Z
+b10 ?
+b10 D
+b10 G
+1/
+1=
+06
+18
+17
+0<
+0*
+b1000000 S
+b10000 ,
+b10000 Q
+b10000 ]
+b0x0x0 -
+b0x0x0 X
+b11111000010000001000001111 [
+b11111000010 4
+b11111000010 F
+b11111 .
+b11111 W
+b1010 3
+b1010 Y
+b11111000010000001000001111101010 9
+b11111000010000001000001111101010 O
+#245000
+0\
+#246000
+b0 1
+b0 C
+b0 T
+#266000
+b10000 >
+b10000 E
+b10000 I
+#267000
+0)
+#300000
+1#
+#320000
+b101 ;
+b101 V
+b101 !
+b101 :
+b101 K
+#360000
+b100 "
+b100 A
+b100 N
+b100 P
+b11 '
+0#
+#362000
+b1000 5
+b1000 R
+#364000
+b0x0x0x ;
+b0x0x0x V
+bx +
+bx H
+bx Z
+bx ?
+bx D
+bx G
+07
+0/
+x8
+x=
+bx @
+bx B
+bx00 S
+bx ,
+bx Q
+bx ]
+bx -
+bx X
+bx [
+bx 4
+bx F
+bx .
+bx W
+bx 3
+bx Y
+bx 9
+bx O
+#365000
+x\
+#366000
+bx 1
+bx C
+bx T
+#384000
+bx ;
+bx V
+bx >
+bx E
+bx I
+#385000
+x)
+#420000
+1#
+#480000
+b1000 "
+b1000 A
+b1000 N
+b1000 P
+b100 '
+0#
+#482000
+b1100 5
+b1100 R
+#484000
+b0 @
+b0 B
+b1 +
+b1 H
+b1 Z
+b0 ?
+b0 D
+b0 G
+1=
+16
+12
+b0 S
+b0 ,
+b0 Q
+b0 ]
+b1010 -
+b1010 X
+b11111000000000100000001111 [
+b11111000000 4
+b11111000000 F
+b11111 .
+b11111 W
+b1010 3
+b1010 Y
+b11111000000000100000001111101010 9
+b11111000000000100000001111101010 O
+#485000
+0\
+#486000
+b101 0
+b101 J
+b101 U
+b0 1
+b0 C
+b0 T
+#504000
+b0x0x ;
+b0x0x V
+b0 >
+b0 E
+b0 I
+#505000
+1)
+#540000
+1#
+#600000
+b1100 "
+b1100 A
+b1100 N
+b1100 P
+b101 '
+0#
+#601000
+b1 ^
+b0 _
+b0 b
+b101001001100101011100110111010101101100011101000111001100100000011011110110011000100000010100000111001001101111011001110111001001100001011011010010000000110001 c
+b1111 a
+b101 `

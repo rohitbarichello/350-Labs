@@ -3,7 +3,7 @@
 `define STRLEN 32
 module RegisterFileTest2_v;
 
-		initial //This initial block used to dump all wire/reg values to dump file
+		initial
      begin
        $dumpfile("RegisterFileTest2_v.vcd");
        $dumpvars(0,RegisterFileTest2_v);
@@ -63,7 +63,6 @@ module RegisterFileTest2_v;
 		
 		#10;
 
-		// Add stimulus here
 		{RA, RB, RW, BusW, RegWr} = {5'd31, 5'd31, 5'd31, 64'h0, 1'b0};
 		#10
 		passTest(BusA, 64'd0, "Initial $0 Check 1", passed);
@@ -113,74 +112,74 @@ module RegisterFileTest2_v;
 		//Test 1
 		{RA, RB, RW, BusW, RegWr} = {5'd0, 5'd1, 5'h0, 64'h0, 1'b0};
 		#4;
-		passTest(BusA, 64'd0, "BusA reads X0", passed);
-		passTest(BusB, 64'd1, "BusA reads X1", passed);
+		passTest(BusA, 64'd0, "BusA reading X0", passed);
+		passTest(BusB, 64'd1, "BusA reading X1", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'd0, "BusA reads X0", passed);
-		passTest(BusB, 64'd1, "BusA reads X1", passed);
+		passTest(BusA, 64'd0, "BusA reading X0", passed);
+		passTest(BusB, 64'd1, "BusA reading X1", passed);
 
 		//Test 2
 		{RA, RB, RW, BusW, RegWr} = {5'd2, 5'd3, 5'h1, 64'h1000, 1'b0};
 		#4;
-		passTest(BusA, 64'd2, "BusA reads X2", passed);
-		passTest(BusB, 64'd3, "BusA reads X3", passed);
+		passTest(BusA, 64'd2, "BusA reading X2", passed);
+		passTest(BusB, 64'd3, "BusA reading X3", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'd2, "BusA reads X2", passed);
-		passTest(BusB, 64'd3, "BusA reads X3", passed);
+		passTest(BusA, 64'd2, "BusA reading X2", passed);
+		passTest(BusB, 64'd3, "BusA reading X3", passed);
 		
 		//Test 3
 		{RA, RB, RW, BusW, RegWr} = {5'd4, 5'd5, 5'h0, 64'h1000, 1'b1};
 		#4;
-		passTest(BusA, 64'd4, "BusA reads X4", passed);
-		passTest(BusB, 64'd5, "BusA reads X5", passed);
+		passTest(BusA, 64'd4, "BusA reading X4", passed);
+		passTest(BusB, 64'd5, "BusA reading X5", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'd4, "BusA reads X4", passed);
-		passTest(BusB, 64'd5, "BusA reads X5", passed);
+		passTest(BusA, 64'd4, "BusA reading X4", passed);
+		passTest(BusB, 64'd5, "BusA reading X5", passed);
 		
 		//Test 4
 		{RA, RB, RW, BusW, RegWr} = {5'd6, 5'd7, 5'hA, 64'h1010, 1'b1};
 		#4;
-		passTest(BusA, 64'd6, "BusA reads X6", passed);
-		passTest(BusB, 64'd7, "BusA reads X7", passed);
+		passTest(BusA, 64'd6, "BusA reading X6", passed);
+		passTest(BusB, 64'd7, "BusA reading X7", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'd6, "BusA reads X6", passed);
-		passTest(BusB, 64'd7, "BusA reads X7", passed);
+		passTest(BusA, 64'd6, "BusA reading X6", passed);
+		passTest(BusB, 64'd7, "BusA reading X7", passed);
 		
 		//Test 5
 		{RA, RB, RW, BusW, RegWr} = {5'd8, 5'd9, 5'hB, 64'h103000, 1'b1};
 		#4;
-		passTest(BusA, 64'd8, "BusA reads X8", passed);
-		passTest(BusB, 64'd9, "BusA reads X9", passed);
+		passTest(BusA, 64'd8, "BusA reading X8", passed);
+		passTest(BusB, 64'd9, "BusA reading X9", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'd8, "BusA reads X8", passed);
-		passTest(BusB, 64'd9, "BusA reads X9", passed);
+		passTest(BusA, 64'd8, "BusA reading X8", passed);
+		passTest(BusB, 64'd9, "BusA reading X9", passed);
 		
 		//Test 6
 		{RA, RB, RW, BusW, RegWr} = {5'hA, 5'hB, 5'hC, 64'h0, 1'b0};
 		#4;
-		passTest(BusA, 64'h1010, "BusA reads X10", passed);
-		passTest(BusB, 64'h103000, "BusA reads X11", passed);
+		passTest(BusA, 64'h1010, "BusA reading X10", passed);
+		passTest(BusB, 64'h103000, "BusA reading X11", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'h1010, "BusA reads X10", passed);
-		passTest(BusB, 64'h103000, "BusA reads X11", passed);
+		passTest(BusA, 64'h1010, "BusA reading X10", passed);
+		passTest(BusB, 64'h103000, "BusA reading X11", passed);
 		
 		//Test 7
 		{RA, RB, RW, BusW, RegWr} = {5'hC, 5'hD, 5'hD, 64'hABCD, 1'b1};
 		#4;
-		passTest(BusA, 64'd12, "BusA reads X12", passed);
-		passTest(BusB, 64'd13, "BusA reads X13", passed);
+		passTest(BusA, 64'd12, "BusA reading X12", passed);
+		passTest(BusB, 64'd13, "BusA reading X13", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'd12, "BusA reads X12", passed);
-		passTest(BusB, 64'hABCD, "BusA reads X13", passed);
+		passTest(BusA, 64'd12, "BusA reading X12", passed);
+		passTest(BusB, 64'hABCD, "BusA reading X13", passed);
 		
 		//Test 8
 		{RA, RB, RW, BusW, RegWr} = {5'hE, 5'hF, 5'hE, 64'h9080009, 1'b0};
 		#4;
-		passTest(BusA, 64'd14, "BusA reads X14", passed);
-		passTest(BusB, 64'd15, "BusA reads X15", passed);
+		passTest(BusA, 64'd14, "BusA reading X14", passed);
+		passTest(BusB, 64'd15, "BusA reading X15", passed);
 		#6; Clk = 0; #10; Clk = 1;
-		passTest(BusA, 64'd14, "BusA reads X14", passed);
-		passTest(BusB, 64'd15, "BusA reads X15", passed);
+		passTest(BusA, 64'd14, "BusA reading X14", passed);
+		passTest(BusB, 64'd15, "BusA reading X15", passed);
 
 		allPassed(passed, 38);
 	end
