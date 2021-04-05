@@ -43,23 +43,23 @@ module InstructionMemory(Data, Address);
 	//  0: LDUR X11, [XZR, 0x10]  //Load 5 into x11
 	//  4: STUR X11, [XZR, 0x20]
 
-	// 63'h000: Data = 32'hF84083EA;
-	// 63'h008: Data = 32'hF80203EA;
+	 63'h000: Data = 32'hF84083EA;
+	 63'h008: Data = 32'hF80203EA;
 	
 
-	// 63'h000: Data = 32'hF84003E9;
-	// 63'h004: Data = 32'hF84083EA;
-	// 63'h008: Data = 32'hF84103EB;
-	// 63'h00c: Data = 32'hF84183EC;
-	// 63'h010: Data = 32'hF84203ED;
-	// 63'h014: Data = 32'hAA0B014A;
-	// 63'h018: Data = 32'h8A0A018C;
-	// 63'h01c: Data = 32'hB400008C;
-	// 63'h020: Data = 32'h8B0901AD;
-	// 63'h024: Data = 32'hCB09018C;
-	// 63'h028: Data = 32'h17FFFFFD;
-	// 63'h02c: Data = 32'hF80203ED;
-	// 63'h030: Data = 32'hF84203ED;  //One last load to place stored value on memdbus for test checking.
+	 /*63'h000: Data = 32'hF84003E9;
+	 63'h004: Data = 32'hF84083EA;
+	 63'h008: Data = 32'hF84103EB;
+	 63'h00c: Data = 32'hF84183EC;
+	 63'h010: Data = 32'hF84203ED;
+	 63'h014: Data = 32'hAA0B014A;
+	 63'h018: Data = 32'h8A0A018C;
+	 63'h01c: Data = 32'hB400008C;
+	 63'h020: Data = 32'h8B0901AD;
+	 63'h024: Data = 32'hCB09018C;
+	 63'h028: Data = 32'h17FFFFFD;
+	 63'h02c: Data = 32'hF80203ED;
+	 63'h030: Data = 32'hF84203ED;  //One last load to place stored value on memdbus for test checking. */
 
 	/* Add code for your tests here */
 

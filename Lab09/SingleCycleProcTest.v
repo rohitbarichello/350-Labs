@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-`include "SingleCycleProc.v"
+//`include "SingleCycleProc.v"
 
 `define STRLEN 32
 `define HalfClockPeriod 60
@@ -77,14 +77,14 @@ module SingleCycleProcTest_v;
         // cycles.
         // ***********************************************************
 
-        while (currentPC < 64'h8)
+        while (currentPC < 64'h34)
         begin
            #(1 * `ClockPeriod);
            $display("CurrentPC:%h",currentPC);
         end
 
         #(1 * `ClockPeriod);	// One more cycle to load the pass code from the DataMemory.
-        passTest(dMemOut, 64'hF, "Results of Program 1", passed);
+        passTest(dMemOut, 64'hf, "Results of Program 1", passed);
 
         // ***********************************************************
         // Add your new tests here
