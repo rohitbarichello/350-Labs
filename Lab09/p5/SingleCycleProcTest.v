@@ -84,14 +84,14 @@ module SingleCycleProcTest_v;
         // cycles.
         // ***********************************************************
 
-        while (currentPC < 64'h34)
+        while (currentPC < 64'h30)
         begin
            #(1 * `ClockPeriod);
            $display("CurrentPC:%h",currentPC);
         end
 
         #(1 * `ClockPeriod);	// One more cycle to load the pass code from the DataMemory.
-        passTest(dMemOut, 64'hf, "Results of Program 1", passed);
+        passTest(dMemOut, 64'hF, "Results of Program 1", passed);
 
         while (currentPC < 64'h5c)
         begin

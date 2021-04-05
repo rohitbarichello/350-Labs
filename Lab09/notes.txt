@@ -1,7 +1,0 @@
-potential problem areas:
-1. not replacing the question marks above
-3. getting the control bits wrong
-4. not adding a delay for each case nonblocking assignment
-5. getting movz wrong
-6. getting the immediates wrong
-7. not wiring ALU control correctly on singlecycleproc.v

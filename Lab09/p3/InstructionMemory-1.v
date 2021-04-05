@@ -50,11 +50,10 @@ module InstructionMemory(Data, Address);
 	63'h030: Data = 32'hF84203ED;  //One last load to place stored value on memdbus for test checking.
 
 	/* Test Program 2:
-	   38: MOVZ X12, 0xdef0          // no shift
+	 * 38: MOVZ X12, 0xdef0 // no shift
 	   40: MOVZ X13, 0x9abc, lsl #16 // 16 bit shift
 	   44: MOVZ X14, 0x5678, lsl #32 // 32 bit shift
 	   48: MOVZ X15, 0x1234, lsl #48 // 48 bit shift
-
 
 	   4c: ADD X9, X12, X13
 	   50: ADD X9, X9, X14
@@ -68,7 +67,6 @@ module InstructionMemory(Data, Address);
 	 63'h040: Data = {11'b11010010101, 16'b1001101010111100, 5'b01101};
 	 63'h044: Data = {11'b11010010110, 16'b0101011001111000, 5'b01110};
 	 63'h048: Data = {11'b11010010111, 16'b0001001000110100, 5'b01111};
-
 
 	 63'h04c: Data = {11'b10001011000, 5'b01101, 6'b000000, 5'b01100, 5'b01001};
 	 63'h050: Data = {11'b10001011000, 5'b01110, 6'b000000, 5'b01001, 5'b01001};
